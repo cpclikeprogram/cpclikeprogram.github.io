@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT,任荣,新月,我的,爱" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Set和Map的主要应用场景在与数组去重和数据存储。 Set是集合， Map是一种叫字典的数据结构。  集合： 特点： 集合是由一组无序且唯一（即不能重复）的项组成的， 可以想象成集合是一个既没有重复元素， 也没有顺序概念的数组。 ES提供了新的数据结构Set， 它类似于数组， 但是成员的值都是唯一的， 没有重复的值 Set本身是一个构造函数， 用来生成Set数据结构     Set实例的属性和方">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Set和Map">
+<meta property="og:url" content="http://example.com/2022/08/05/interview/Set%EF%BC%8CMap%20Symbol%20BigInt/index.html">
+<meta property="og:site_name" content="新月">
+<meta property="og:description" content="Set和Map的主要应用场景在与数组去重和数据存储。 Set是集合， Map是一种叫字典的数据结构。  集合： 特点： 集合是由一组无序且唯一（即不能重复）的项组成的， 可以想象成集合是一个既没有重复元素， 也没有顺序概念的数组。 ES提供了新的数据结构Set， 它类似于数组， 但是成员的值都是唯一的， 没有重复的值 Set本身是一个构造函数， 用来生成Set数据结构     Set实例的属性和方">
+<meta property="og:locale">
+<meta property="og:image" content="http://example.com/media/5932878400cb733a2405a78758a7ccf1.png">
+<meta property="og:image" content="http://example.com/media/494c0d0797fe79591bb453b49d013f65.png">
+<meta property="article:published_time" content="2022-08-05T10:48:50.000Z">
+<meta property="article:modified_time" content="2022-08-04T15:05:49.892Z">
+<meta property="article:author" content="cpc">
+<meta property="article:tag" content="I have a sweet dream">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/media/5932878400cb733a2405a78758a7ccf1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2022/08/05/interview/Set，Map Symbol BigInt/"/>
+
+
+
+
+
+  <title>Set和Map | 新月</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">新月</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">rr</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-vue">
+          <a href="/vue/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-key"></i> <br />
+            
+            vue
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-vue-router">
+          <a href="/vue-router/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-podcast"></i> <br />
+            
+            vue-router
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/05/interview/Set%EF%BC%8CMap%20Symbol%20BigInt/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="新月">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Set和Map</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-08-05T18:48:50+08:00">
+                2022-08-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/interview/" itemprop="url" rel="index">
+                    <span itemprop="name">interview</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Set和Map的主要应用场景在与数组去重和数据存储。</p>
+<p>Set是集合， Map是一种叫字典的数据结构。</p>
+<ol>
+<li>集合：<ol>
+<li>特点：<ol>
+<li>集合是由一组无序且唯一（即不能重复）的项组成的， 可以想象成集合是一个既没有重复元素， 也没有顺序概念的数组。</li>
+<li>ES提供了新的数据结构Set， 它类似于数组， 但是成员的值都是唯一的， 没有重复的值</li>
+<li>Set本身是一个构造函数， 用来生成Set数据结构</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Set实例的属性和方法<ol>
+<li>Set属性：<ol>
+<li>size：返回集合所包含元素的数量</li>
+</ol>
+</li>
+<li>Set的方法：<ol>
+<li>操作方法：<ol>
+<li>add(value): 向集合添加一个新的项</li>
+<li>delete(value): 从集合中移出一个值</li>
+<li>has(value): 如果值在集合中存在， 返回true， 否则false</li>
+<li>clear(value): 移出集合里所有的项</li>
+</ol>
+</li>
+<li>遍历方法：<ol>
+<li>Keys(): 返回一个包含集合中所有键的数组</li>
+<li>values(): 返回一个包含集合中所有值的数组</li>
+<li>entires: 返回一个包含集合中所有键值对的数组</li>
+<li>forEach(): 用于对集合成员执行某种操作，没有返回值</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>字典<ol>
+<li>字典与集合的共同点： 集合、字典可以存储不重复的值</li>
+<li>不同点： 集合是以[val, val] 的形式存储元素， 字典是以[键，值]的形式存储</li>
+<li>也就是说Map的主要用途也是用于存储数据， 相比于Object只提供”字符串-值“的对应， Map提供了“值—-值”的对应</li>
+<li>属性<ol>
+<li>size： 返回字典所包含的元素个数</li>
+</ol>
+</li>
+<li>操作方法：<ol>
+<li>set(key, val): 向字典中添加新元素</li>
+<li>get(key): 通过键值查找特点的数值并返回</li>
+<li>has(key): 如果键存在字典中返回true， 否则false</li>
+<li>delete(key): 通过键值从字典中移出对应的数据</li>
+<li>clear(): 将这个字典中的所有元素删除</li>
+</ol>
+</li>
+<li>遍历方法：<ol>
+<li>keys(): 将字典中包含的所有键名以数组形式返回</li>
+<li>values(): 将字典中包含的所有数值以数组形式返回</li>
+<li>forEach(): 遍历字典的所有成员</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Symbol： Symbol是ES6引入的一种原始数据类型， 表示独一无二的值， 当我们想为一个对象添加新方法， 通过创建要给属性名的Symbol类型的方法， 可以从根本上防止属性名冲突。<ol>
+<li>如何创建并使用Symbol?</li>
+<li><img src="/media/5932878400cb733a2405a78758a7ccf1.png"></li>
+<li>Symbol属性特性<ol>
+<li>Symbol值不能与其他类型的值进行运算， 会报错</li>
+<li>Symbol值可以显式转为字符串、布尔值、但不能转为数值</li>
+</ol>
+</li>
+<li>通过Symbol函数创建<ol>
+<li>Symbol函数前不能使用new命令， 因为生成的Symbol是一个原始类型的值， 不是对象</li>
+<li>使用Symbol函数创建Symbol值时， 函数的参数只是表示对当前的Symbol值的描述， 这也就能够解释在创建时传入相同参数的Symbol函数的返回值是不相等的。</li>
+<li>如果Symbol的参数是一个对象， 就会调用该对象的toString方法， 将其转为字符串， 然后才生成一个Symbol值。</li>
+</ol>
+</li>
+<li>使用SYmbol类型做对象属性名<ol>
+<li>使用Symbol值定义属性时， SYmbol值必须放在方括号中， 不能用点运算符， 因为点运算符后面后面总是字符串， 这会导致读取不到标识名。</li>
+<li>Symbol作为属性名、遍历对象的时候， 该属性不会出现在for…in、for…of循环中， 也不会被object.keys()、object.getOwnPropertyNames()、JSON.stringify()返回， 也不会被Object.prototype.hasOwnPrototype()访问到。</li>
+<li>可读取到对象的Symbol属性的方法<ol>
+<li>有一个Object.getOwnPropertySymbols()方法， 可以获取指定对象的所有Symbol属性名， 该方法返回一个数组， 成员是当前对象的所有用作属性名的Symbol值。</li>
+<li>Reflect.ownKeys()方法可以返回所有类型的键名， 包括常规键名和Symbol键名。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Symbol的一些方法<ol>
+<li>[ES2019]提供了一个实例属性description， 直接返回Symbol的描述</li>
+<li>Symbol.for()方法可以重新使用同一个Symbol值。它接受一个字符串作为参数， 然后搜索有没有一个参数作为名称的Symbol值， 如果有， 就返回这个Symbol值， 否则就新建一个以该字符串为名称的Symbol值</li>
+<li>Symbol.for()和Symbol的区别在于前者会被登记在全局环境中共搜索， 后者不会</li>
+<li>Symbol.keyFor()方法返回一个已登记的Symbol类型值的key。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>BigInt: BigInt是一种新的数据类型， 用于当整数值大于Number数据类型支持的范围时。这种数据类型允许我们安全地对大整数执行算数操作， 表示高分辨率的时间戳， 使用大整数id， 等等，而不需要使用库。<ol>
+<li>为什么需要BigInt?<ol>
+<li>在JS中， 所有的数字都是以双精度64位浮点格式表示的，这会导致JS中的Number无法精确表示非常打的证书</li>
+</ol>
+</li>
+<li>如何创建并使用BigInt？<ol>
+<li>创建方法<ol>
+<li>直接在数字结尾追加n console.log(9007199254740995n );</li>
+<li>用Bigint构造函数 BigInt(“9007199254740995”);</li>
+</ol>
+</li>
+<li>基本使用：<ol>
+<li><img src="/media/494c0d0797fe79591bb453b49d013f65.png"></li>
+<li>BigInt不支持一元加号运算符， 这可能是某些程序可能依赖于+始终生成Number的不变量， 或者抛出异常。</li>
+<li>因为隐式类型转换可能丢失信息， 所以不允许在bigInt和Number之间进行混合操作， 为混合使用大整数和浮点数时， 结果值可能无法由BigInt或Number精确表示。</li>
+<li>不能将BigInt传递给Web api和内置的JS函数， 这些函数需要一个Number类型的数字。</li>
+<li>当Boolean类型与BigInt类型相遇时， BigInt的处理方式与Number类似。</li>
+<li>BigInt可以正常地进行位运算， 如|、&amp;、&lt;&lt;、&gt;&gt;和^</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/08/05/interview/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" rel="next" title="性能优化">
+                <i class="fa fa-chevron-left"></i> 性能优化
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/08/05/interview/Vue/" rel="prev" title="跨域">
+                跨域 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/cpclikeprogram" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/u/6733955578" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.cnblogs.com/CPC-Carper-diem/" target="_blank" title="CBlog">
+                      
+                        <i class="fa fa-fw fa-wifi"></i>CBlog</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">cpc</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

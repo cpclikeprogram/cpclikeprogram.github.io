@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT,任荣,新月,我的,爱" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="vue和React-VRReact与vue有很多相似之处，如他们都是javascript的UI框架，专注于创造前端的富应用。不同于早期的javascript框架“功能齐全”，Reat与vue只有框架的骨架，其他的功能如路由、状态管理等是框架分离的组件。 相似之处 两者都是用于创建UI的javascript库；  两者都快速轻便；  都有基于组件的架构；  都是用虚拟DOM；  都可放入单个HTML">
+<meta property="og:type" content="article">
+<meta property="og:title" content="interview1.md">
+<meta property="og:url" content="http://example.com/2022/07/29/interview1-md/index.html">
+<meta property="og:site_name" content="新月">
+<meta property="og:description" content="vue和React-VRReact与vue有很多相似之处，如他们都是javascript的UI框架，专注于创造前端的富应用。不同于早期的javascript框架“功能齐全”，Reat与vue只有框架的骨架，其他的功能如路由、状态管理等是框架分离的组件。 相似之处 两者都是用于创建UI的javascript库；  两者都快速轻便；  都有基于组件的架构；  都是用虚拟DOM；  都可放入单个HTML">
+<meta property="og:locale">
+<meta property="og:image" content="file:///C:/Users/PC/AppData/Local/Temp/ksohtml14984/wps1.jpg">
+<meta property="og:image" content="file:///C:/Users/PC/AppData/Local/Temp/ksohtml14984/wps2.jpg">
+<meta property="og:image" content="file:///C:/Users/PC/AppData/Local/Temp/ksohtml14984/wps3.jpg">
+<meta property="og:image" content="file:///C:/Users/PC/AppData/Local/Temp/ksohtml14984/wps4.jpg">
+<meta property="og:image" content="file:///C:/Users/PC/AppData/Local/Temp/ksohtml14984/wps5.jpg">
+<meta property="og:image" content="file:///C:/Users/PC/AppData/Local/Temp/ksohtml14984/wps6.jpg">
+<meta property="og:image" content="file:///C:/Users/PC/AppData/Local/Temp/ksohtml14984/wps7.jpg">
+<meta property="og:image" content="file:///C:/Users/PC/AppData/Local/Temp/ksohtml14984/wps8.jpg">
+<meta property="article:published_time" content="2022-07-29T14:39:12.000Z">
+<meta property="article:modified_time" content="2022-07-29T14:40:15.885Z">
+<meta property="article:author" content="cpc">
+<meta property="article:tag" content="I have a sweet dream">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="file:///C:/Users/PC/AppData/Local/Temp/ksohtml14984/wps1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2022/07/29/interview1-md/"/>
+
+
+
+
+
+  <title>interview1.md | 新月</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">新月</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">rr</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-vue">
+          <a href="/vue/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-key"></i> <br />
+            
+            vue
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-vue-router">
+          <a href="/vue-router/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-podcast"></i> <br />
+            
+            vue-router
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/07/29/interview1-md/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="新月">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">interview1.md</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-07-29T22:39:12+08:00">
+                2022-07-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="vue和React-VR"><a href="#vue和React-VR" class="headerlink" title="vue和React-VR"></a><strong>vue</strong>和<strong>React</strong>-VR</h2><p><strong>React</strong>与<strong>vue</strong>有很多相似之处，如他们都是<strong>javascript</strong>的UI框架，专注于创造前端的富应用。不同于早期的<strong>javascript</strong>框架“功能齐全”，Reat与<strong>vue</strong>只有框架的骨架，其他的功能如路由、状态管理等是框架分离的组件。</p>
+<h3 id="相似之处"><a href="#相似之处" class="headerlink" title="相似之处"></a>相似之处</h3><ul>
+<li><p>两者都是用于创建UI的<strong>javascript</strong>库；</p>
+</li>
+<li><p>两者都快速轻便；</p>
+</li>
+<li><p>都有基于组件的架构；</p>
+</li>
+<li><p>都是用虚拟DOM；</p>
+</li>
+<li><p>都可放入单个HTML文件中，或者成为更复杂webpack设置中的模块；</p>
+</li>
+<li><p>都有独立但常用的路由器和状态管理库；</p>
+</li>
+</ul>
+<h3 id="语法区别"><a href="#语法区别" class="headerlink" title="语法区别"></a>语法区别</h3><ul>
+<li><p>它们之间的最大区别是 <strong>vue</strong> 通常使用HTML模板文件，而<strong>React</strong>则完全是 <strong>javascript</strong> 。</p>
+</li>
+<li><p><strong>vue</strong>有双向绑定语法糖。</p>
+</li>
+</ul>
+<h3 id="组件不同点"><a href="#组件不同点" class="headerlink" title="组件不同点"></a>组件不同点</h3><p>在<strong>vue</strong>组件中，有几个观念和<strong>React</strong>相差比较大，我觉得主要有以下这几点：</p>
+<ul>
+<li><p><strong>vue</strong>组件分为全局注册和局部注册，在<strong>React</strong>中都是通过import相应组件，然后模版中引用；</p>
+</li>
+<li><p><strong>vue</strong>的props是可以动态变化的，子组件也实时更新，在<strong>React</strong>中官方建议props要像纯函数那样，输入输出一致对应，而且不太建议通过props来更改视图；</p>
+</li>
+<li><p><strong>vue</strong>子组件一般要显示地调用props选项来声明它期待获得的数据。而在<strong>React</strong>中不必需，另两者都有props校验机制；</p>
+</li>
+<li><p>每个<strong>vue</strong>实例都实现了事件接口，方便父子组件通信，小型项目中不需要引入状态管理机制，而<strong>React</strong>必需自己实现；</p>
+</li>
+<li><p><strong>vue</strong>使用插槽分发内容，使得可以混合父组件的内容与子组件自己的模板；</p>
+</li>
+<li><p><strong>vue</strong>多了指令系统，让模版可以实现更丰富的功能，而<strong>React</strong>只能使用JSX语法；</p>
+</li>
+<li><p><strong>vue</strong>增加的语法糖computed和watch，而在<strong>React</strong>中需要自己写一套逻辑来实现；</p>
+</li>
+<li><p><strong>React</strong>的思路是all in js，通过js来生成html，所以设计了jsx，还有通过js来操作css，社区的styled-component、jss等；而 <strong>vue</strong>是把html，css，js组合到一起，用各自的处理方式，<strong>vue</strong>有单文件组件，可以把html、css、js写到一个文件中，html提供了模板引擎来处理。</p>
+</li>
+<li><p><strong>React</strong>做的事情很少，很多都交给社区去做，<strong>vue</strong>很多东西都是内置的，写起来确实方便一些， 比如 redux的combineReducer就对应<strong>vue</strong>x的modules， 比如reselect就对应<strong>vue</strong>x的getter和<strong>vue</strong>组件的computed， <strong>vue</strong>x的mutation是直接改变的原始数据，而redux的reducer是返回一个全新的state，所以redux结合immutable来优化性能，<strong>vue</strong>不需要。</p>
+</li>
+<li><p><strong>React</strong>是整体的思路就是函数式，所以推崇纯组件，数据不可变，单向数据流，当然需要双向的地方也可以做到，比如结合redux-form，组件的横向拆分一般是通过高阶组件。而<strong>vue</strong>是数据可变的，双向绑定，声明式的写法，<strong>vue</strong>组件的横向拆分很多情况下用mixin。</p>
+</li>
+</ul>
+<h2 id="mvc和mvvm比较-MV"><a href="#mvc和mvvm比较-MV" class="headerlink" title="mvc和mvvm比较-MV"></a>mvc和mvvm比较-MV</h2><ul>
+<li>MVC: MVC是应用最广泛的软件架构之一,一般MVC分为:Model(模型),View(视图),Controller(控制器)。 这主要是基于分层的目的,让彼此的职责分开.View一般用过Controller来和Model进行联系。Controller是Model和View的协调者,View和Model不直接联系。基本都是单向联系。<img src="file:///C:\Users\PC\AppData\Local\Temp\ksohtml14984\wps1.jpg" alt="img"></li>
+</ul>
+<ol>
+<li><p>View传送指令到Controller。</p>
+</li>
+<li><p>Controller完成业务逻辑后改变Model状态。</p>
+</li>
+<li><p>Model将新的数据发送至View,用户得到反馈。</p>
+</li>
+</ol>
+<ul>
+<li>MVVM: MVVM是把MVC中的Controller改变成了ViewModel。<code>View的变化会自动更新到ViewModel,ViewModel的变化也会自动同步到View上显示,通过数据来显示视图层</code>。</li>
+</ul>
+<p><img src="file:///C:\Users\PC\AppData\Local\Temp\ksohtml14984\wps2.jpg" alt="img"> </p>
+<h3 id="MVVM模式的优点以及与MVC模式的区别"><a href="#MVVM模式的优点以及与MVC模式的区别" class="headerlink" title="MVVM模式的优点以及与MVC模式的区别"></a>MVVM模式的优点以及与MVC模式的区别</h3><ul>
+<li>MVVM模式的优点:</li>
+</ul>
+<ol>
+<li><p>低耦合:View可以独立于Model变化和修改,一个ViewModel可以绑定到不同的View上,当View变化的时候Model可以不变,当Model变化的时候View也可以不变。</p>
+</li>
+<li><p>可重用性: 可以把一些视图逻辑放在一个ViewModel里面,让很多View重用这段视图逻辑。</p>
+</li>
+<li><p>独立开发: 开发人员可以专注于业务逻辑和数据的开发,设计人员可以专注于页面的设计。</p>
+</li>
+</ol>
+<ul>
+<li>MVVM和MVC的区别:</li>
+</ul>
+<ol>
+<li><p>MVC中Controller演变成MVVM中的ViewModel</p>
+</li>
+<li><p>MVVM通过数据来显示视图层而不是节点操作</p>
+</li>
+<li><p>MVVM主要解决了MVC中大量的dom操作使页面渲染性能降低,加载速度变慢,影响用户体验</p>
+</li>
+</ol>
+<h2 id="如果我开发一个小型的东西是应该使用React还是vue-QU"><a href="#如果我开发一个小型的东西是应该使用React还是vue-QU" class="headerlink" title="如果我开发一个小型的东西是应该使用React还是vue?-QU"></a>如果我开发一个小型的东西是应该使用<strong>React</strong>还是<strong>vue</strong>?-QU</h2><p><strong>vue</strong></p>
+<h2 id="对es6了解多少-JS"><a href="#对es6了解多少-JS" class="headerlink" title="对es6了解多少-JS"></a>对es6了解多少-JS</h2><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7068935394191998990">https://juejin.cn/post/7068935394191998990</a></p>
+<h3 id="let-const-var区别"><a href="#let-const-var区别" class="headerlink" title="let const var区别"></a>let const var区别</h3><ul>
+<li>var</li>
+</ul>
+<ol>
+<li><p>在全局作用域用var定义的变量是全局变量，在其所有子级域中都可以使用。</p>
+</li>
+<li><p>var声明的变量存在变量提升的情况。（var的预解析）</p>
+</li>
+<li><p>var可以重复声明一个变量</p>
+</li>
+<li><p>在函数内用var声明的变量是局部变量</p>
+</li>
+</ol>
+<ul>
+<li>let</li>
+</ul>
+<ol>
+<li><p>let是ES6新增的语法。用法类似于var，但声明的变量只在let所在的代码块内生效。</p>
+</li>
+<li><p>不存在变量提升，在用let声明一个变量前，这个变量是不存在的，如果引用就会报错。</p>
+</li>
+<li><p>暂时性死区。当代码块用let声明一个变量时，在在该代码块中在let声明变量之前，该变量都不可用。</p>
+</li>
+<li><p>不能再相同作用域重复声明，但可以在不同代码块中重复声明。</p>
+</li>
+</ol>
+<ul>
+<li>const</li>
+</ul>
+<ol>
+<li><p>const声明一个只读的变量，一旦声明，该变量的值不能改变。可以当做常量。而且const声明变量必须立即初始化，不然也会报错。</p>
+</li>
+<li><p>实际上const是保证变量指向内存地址的值是不能改动的，可以对简单数据类型，是可以当做常量的。</p>
+</li>
+<li><p>而对于复杂类型的数据，变量指向的内存地址，保存的只是一个指向实际数据的指针，const只能保证这个指针是固定的，即实际数据的位置不变，但不能保证实际数据不被修改。</p>
+</li>
+<li><p>其他情况，const与let是一致的。</p>
+</li>
+</ol>
+<h3 id="var-let-const的区别主要为以下几点："><a href="#var-let-const的区别主要为以下几点：" class="headerlink" title="var,let,const的区别主要为以下几点："></a>var,let,const的区别主要为以下几点：</h3><ul>
+<li>变量提升</li>
+</ul>
+<ol>
+<li><p>var声明的变量存在变量提升，即变量可以在声明之前调用，值为undefined。</p>
+</li>
+<li><p>let和const不存在变量提升，即它们所声明的变量一定要在声明后使用，否则报错。</p>
+</li>
+</ol>
+<ul>
+<li>暂时性死区</li>
+</ul>
+<p>var不存在暂时性死区。</p>
+<ol>
+<li><p>let和const存在暂时性死区，只有等到声明变量的那一行代码出现，才可以获取和使用该变量。</p>
+</li>
+<li><p>块级作用域</p>
+</li>
+<li><p>var不存在块级作用域。</p>
+</li>
+<li><p>let和const存在块级作用域。</p>
+</li>
+</ol>
+<ul>
+<li>重复声明</li>
+</ul>
+<ol>
+<li><p>var允许重复声明变量。</p>
+</li>
+<li><p>let和const在同一作用域不允许重复声明变量。</p>
+</li>
+<li><p>修改声明的变量</p>
+</li>
+<li><p>var和let可以。</p>
+</li>
+<li><p>const声明一个只读的常量。一旦声明，常量的值就不能改变。复杂数据类型的值和结构仍然可以修改。</p>
+</li>
+</ol>
+<h2 id="浏览器怎么识别es6的-如果不兼容你会怎么解决"><a href="#浏览器怎么识别es6的-如果不兼容你会怎么解决" class="headerlink" title="浏览器怎么识别es6的 如果不兼容你会怎么解决"></a>浏览器怎么识别es6的 如果不兼容你会怎么解决</h2><p>目前，浏览器和转换工具并没有百分百支持ES6的全部新特性，但并不影响大家对ES6的学习热情，因为这是未来的行业标准，前端开发者必须掌握的技能；而今天介绍的babel就是目前对 ES6 的支持程度较高，使用广泛的ES6转码器。</p>
+<h2 id="听到了你提到babel-你知道原理是什么以及如何配置吗"><a href="#听到了你提到babel-你知道原理是什么以及如何配置吗" class="headerlink" title="听到了你提到babel  你知道原理是什么以及如何配置吗"></a>听到了你提到babel  你知道原理是什么以及如何配置吗</h2><p>babel 是一个 JS、TS 的编译器，它能把新语法写的代码转换成目标环境支持的语法的代码，并且对目标环境不支持的 api 自动 polyfill(聚填充)。</p>
+<p>实现原理：preset-env 的原理之前讲过，就是根据 targets 的配置查询内部的 @babe&#x2F;compat-data 的数据库，过滤出目标环境不支持的语法和 api，引入对应的转换插件。(<a target="_blank" rel="noopener" href="https://juejin.cn/post/7094296981001994277">https://juejin.cn/post/7094296981001994277</a>)</p>
+<h2 id="为什么微信小程序不建议频繁调用setdata-小程序"><a href="#为什么微信小程序不建议频繁调用setdata-小程序" class="headerlink" title="为什么微信小程序不建议频繁调用setdata-小程序"></a>为什么微信小程序不建议频繁调用setdata-小程序</h2><p>setData是小程序开发中使用最频繁的接口，也是最容易引发性能问题的接口。</p>
+<blockquote>
+<p>setData函数用于将数据从逻辑层渲染到视图层（异步），同时改变对应的this.data的值（同步）。</p>
+</blockquote>
+<p>常见的setData操作错误（官方文档）</p>
+<ol>
+<li>频繁的去setData</li>
+</ol>
+<p>在我们分析过的一些案例里，部分小程序会非常频繁（毫秒级）的去setData，其导致了两个后果：</p>
+<p>Android 下用户在滑动时会<strong>感觉到卡顿，操作反馈延迟严重</strong>，因为 <strong>JS 线程一直在编译执行渲染，未能及时将用户操作事件传递到逻辑层，逻辑层亦无法及时将操作处理结果及时传递到视图层</strong>；</p>
+<p>渲染有出现延时，由于 WebView 的 JS 线程一直处于忙碌状态，逻辑层到页面层的通信耗时上升，视图层收到的数据消息时距离发出时间已经过去了几百毫秒，渲染的结果并不实时；</p>
+<ol start="2">
+<li>每次setData都传递大量新数据</li>
+</ol>
+<p>由setData的底层实现可知，我们的数据传输实际是一次evaluate<strong>javascript</strong>脚本过程，当数据量过大时会增加脚本的编译执行时间，占用WebView JS线程。</p>
+<ol start="3">
+<li>后台态页面进行setData</li>
+</ol>
+<p>当页面进入后台态（用户不可见），不应该继续去进行setData，后台态页面的渲染用户是无法感受的，另外后台态页面去setData也会抢占前台页面的执行。</p>
+<h2 id="uniapp怎么做到跨平台开发的-uniapp"><a href="#uniapp怎么做到跨平台开发的-uniapp" class="headerlink" title="uniapp怎么做到跨平台开发的-uniapp"></a>uniapp怎么做到跨平台开发的-uniapp</h2><p>uniapp 通过 API&#x2F;组件&#x2F;样式的 条件编译实现对于不同平台的适配工作</p>
+<p>API 条件编译</p>
+<p>组件条件编译</p>
+<p>样式条件编译</p>
+<p>优点</p>
+<p>操作简单，有过C语言开发经验的比较亲切，隔离作用强，不会造成代码污染</p>
+<p>编译阶段处理后，能 对 import 方式也做 条件编译</p>
+<p>缺点</p>
+<p>有一定的代码侵入</p>
+<h2 id="如果我想去打开一个设备的摄像头-你会怎么操作"><a href="#如果我想去打开一个设备的摄像头-你会怎么操作" class="headerlink" title="如果我想去打开一个设备的摄像头 你会怎么操作"></a>如果我想去打开一个设备的摄像头 你会怎么操作</h2><p>要访问用户的相机（或麦克风），我们使用<strong>javascript</strong> MediaStream API。该API允许通过流访问这些设备捕获的视频和音频。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">			<span class="keyword">let</span> btn = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;button&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">			<span class="keyword">let</span> video = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;video&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">			btn.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">				<span class="keyword">if</span>(<span class="variable language_">window</span>.<span class="property">navigator</span>.<span class="property">webkitGetUserMedia</span>)&#123;</span></span><br><span class="line"><span class="language-javascript">					<span class="variable language_">window</span>.<span class="property">navigator</span>.<span class="title function_">webkitGetUserMedia</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">						<span class="attr">audio</span>:<span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">						<span class="attr">video</span>:<span class="literal">true</span></span></span><br><span class="line"><span class="language-javascript">					&#125;,<span class="keyword">function</span>(<span class="params">data</span>)&#123;</span></span><br><span class="line"><span class="language-javascript">						video.<span class="property">srcObject</span> = data;<span class="comment">//把摄像头捕捉到的数据给视频</span></span></span><br><span class="line"><span class="language-javascript">						video.<span class="title function_">play</span>();<span class="comment">//播放</span></span></span><br><span class="line"><span class="language-javascript">						<span class="variable language_">console</span>.<span class="title function_">log</span>(data)</span></span><br><span class="line"><span class="language-javascript">					&#125;,<span class="keyword">function</span>(<span class="params"></span>)&#123;&#125;)</span></span><br><span class="line"><span class="language-javascript">				&#125;</span></span><br><span class="line"><span class="language-javascript">			&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="vue中哪个路由用的比较多"><a href="#vue中哪个路由用的比较多" class="headerlink" title="vue中哪个路由用的比较多"></a><strong>vue</strong>中哪个路由用的比较多</h2><h3 id="hash和history的区别"><a href="#hash和history的区别" class="headerlink" title="hash和history的区别:"></a>hash和history的区别:</h3><p><img src="file:///C:\Users\PC\AppData\Local\Temp\ksohtml14984\wps3.jpg" alt="img"> </p>
+<p>hash模式(<strong>vue</strong>-router默认)</p>
+<blockquote>
+<p>hash模式是一种把前端路由的路径用 #拼接在真实的URL后面的模式 当#后面的路径发生变化时，浏览器并不会重新发起请求，而是会触发hashchange事件。</p>
+</blockquote>
+<ul>
+<li><p>hash模式优缺点</p>
+</li>
+<li><p>优点</p>
+</li>
+</ul>
+<ol>
+<li><p>只需要前端配置路由表, 不需要后端的参与</p>
+</li>
+<li><p>兼容性好, 浏览器都能支持</p>
+</li>
+<li><p>hash值改变不会向后端发送请求, 完全属于前端路由</p>
+</li>
+</ol>
+<ul>
+<li>缺点</li>
+</ul>
+<ol>
+<li>hash值前面需要加#, 不符合url规范,也不美观</li>
+</ol>
+<p>history路由的原理</p>
+<p>history 模式</p>
+<blockquote>
+<p>history API 是 H5 提供的新特性，允许开发者直接更改前端路由，即更新浏览器 URL 地址而不重新发起请求(将url替换并且不刷新页面)。</p>
+</blockquote>
+<p>优点：</p>
+<ul>
+<li>符合url地址规范, 不需要#, 使用起来比较美观</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li><p>兼容性不如 hash，且需要服务端支持重定向，否则一刷新页面就404了</p>
+</li>
+<li><p>兼容性比较差, 利用了 HTML5 History对象中新增的 pushState() 和 replaceState() 方法,需要特定浏览器的支持.</p>
+</li>
+</ul>
+<h2 id="谈一谈优化"><a href="#谈一谈优化" class="headerlink" title="谈一谈优化"></a>谈一谈优化</h2><ul>
+<li><p>框架生命周期熟悉使用</p>
+</li>
+<li><p>接口处理</p>
+</li>
+<li><p>静态资源处理</p>
+</li>
+<li><p>DOM 处理</p>
+</li>
+<li><p>工具处理</p>
+</li>
+</ul>
+<h2 id="为什么png会优于gif"><a href="#为什么png会优于gif" class="headerlink" title="为什么png会优于gif"></a>为什么png会优于gif</h2><p><img src="file:///C:\Users\PC\AppData\Local\Temp\ksohtml14984\wps4.jpg" alt="img"> </p>
+<h2 id="你知道怎么在js加载的时候去优化吗"><a href="#你知道怎么在js加载的时候去优化吗" class="headerlink" title="你知道怎么在js加载的时候去优化吗"></a>你知道怎么在js加载的时候去优化吗</h2><ul>
+<li><p>从加载上优化：合理放置脚本位置。我们应该尽量的让内容和样式先展示出来，将js文件放在<body>最后，以此来优化用户体验。</p>
+</li>
+<li><p>从请求次数上优化： 减少请求次数。页面加载的过程中，最耗时间的不是js本身的加载和执行，相比之下，每一次去后端获取资源，客户端与后台建立链接才是最耗时的。减少HTTP请求，是我们着重优化的一项，事实上，在页面中js脚本文件加载很很多情况下，它的优化效果是很显著的。要减少HTTP的请求，就不得不提起文件的<strong>精简压缩</strong>了。</p>
+</li>
+<li><p>从加载方式上优化：无阻塞脚本加载。就是页面在加载完成后才加载js代码，也就是在window对象的load事件触发后才去下载脚本。 要实现这种方式，常用以下几种方式：</p>
+<ul>
+<li><p>延迟脚本加载（defer）</p>
+</li>
+<li><p>延迟脚本加载（async）</p>
+</li>
+<li><p>动态添加脚本元素</p>
+</li>
+<li><p>XMLHttpRequest脚本注入</p>
+</li>
+<li><p>前两者的不同点在于他们的执行时机，async需要加载完成后就会自动执行代码，但是defer需要等待页面加载完成后才会执行。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="对浏览器的渲染引擎有没有了解"><a href="#对浏览器的渲染引擎有没有了解" class="headerlink" title="对浏览器的渲染引擎有没有了解"></a>对浏览器的渲染引擎有没有了解</h2><p>渲染引擎内部解析执行大概过程的信息如下:</p>
+<p>1.当访问页面的时候会进行网络请求(network)去获取页面的内容;当如果命中缓存(cache)就会从存储(memory)上直接读取。</p>
+<p>2.HTMLParser 进行html解析通过特定标识进行分块。可解析为CSS DOM JS几个模块。</p>
+<p>3.CSSParser 进行css也是解析。</p>
+<p>4.DOMParser 进行DOM结构解析。(构建过程中发现是JS部分执行5,如果是资源进行异步请求.不会阻碍解析)。</p>
+<p>5.<strong>javascript</strong> 部分丢给JS引擎进行解析。(如果有操作DOM&#x2F;CSS部分会影响之前的解析,同时会阻碍解析)。</p>
+<p>6.通过上文解析内容构建RenderTree。</p>
+<p>7.解析完成通过renderTree进行布局和绘制。</p>
+<p>8.将最终图像显示在屏幕上。</p>
+<h2 id="前端的缓存策略"><a href="#前端的缓存策略" class="headerlink" title="前端的缓存策略"></a>前端的缓存策略</h2><p><img src="file:///C:\Users\PC\AppData\Local\Temp\ksohtml14984\wps5.jpg" alt="img"> </p>
+<h3 id="HTTP缓存策略"><a href="#HTTP缓存策略" class="headerlink" title="HTTP缓存策略"></a>HTTP缓存策略</h3><p>浏览器对静态资源的缓存本质上是HTTP协议的缓存策略，根据是否要向服务端发送请求的不同，HTTP缓存策略又可分为强制缓存和协商缓存策略。</p>
+<p>1、强制缓存策略</p>
+<p>浏览器不发请求，根据过期时间决定使用本地缓存还是请求新资源，这样的策略就叫做强制缓存策略。</p>
+<p>Expires和Cache-control是强制缓存策略的重要响应头信息。</p>
+<p>2、协商缓存策略</p>
+<p>浏览器会发出新请求，经过服务器对资源的对比后决定采用本地缓存还是新资源，这样的策略叫做协商缓存策略。（顾名思义，就是浏览器和服务器协商来解决这件事）</p>
+<p>判断启用协商缓存策略的标准是：Cache-control设置为no-cache或者max-age与Expires都过期的情况下。</p>
+<h2 id="js怎么做到缓存"><a href="#js怎么做到缓存" class="headerlink" title="js怎么做到缓存"></a>js怎么做到缓存</h2><ol>
+<li><p>cookie </p>
+</li>
+<li><p>localStorage(本地存储) </p>
+</li>
+<li><p>sessionStorage(会话存储)</p>
+</li>
+</ol>
+<p>三种缓存方法的比较</p>
+<p>cookie：大小4k，一般由服务器生成，可设置失效时间，关闭浏览器后失效，与服务器通信时：每次都会携带HTTP头中，如果使用cookie保存过多数据会带来性能问题</p>
+<p>localhostStorage：大小5M，只要不手动删除，存储的是永久数据，与服务器通信时： 仅在客户端（即浏览器）中保存，不参与和服务器的通信。</p>
+<p>sessionStorage：大小5M，存放临时数据，仅在当前会话有效，关闭页面或浏览器后被清除，与服务器通信时： 仅在客户端（即浏览器）中保存，不参与和服务器的通信。</p>
+<h2 id="js的基本数据类型"><a href="#js的基本数据类型" class="headerlink" title="js的基本数据类型"></a>js的基本数据类型</h2><p>常见的基本数据类型：</p>
+<p>Number、String、Boolean、Null和Undefind、symbol。</p>
+<h3 id="判断js数据类型的方法"><a href="#判断js数据类型的方法" class="headerlink" title="判断js数据类型的方法"></a>判断js数据类型的方法</h3><ul>
+<li><strong>javascript</strong>判断数据类型的方法大致有以下几种：</li>
+</ul>
+<ol>
+<li><p>Typeof：typeof用以获取一个变量或者表达式的类型-一般用于判断值类型</p>
+</li>
+<li><p>Instanceof：instanceof 运算符是用来判断一个对象是否在其原型链原型构造函数的属性，所以在比较对象（引用类型）时才有意义</p>
+</li>
+<li><p>Constructor：constructor本来是原型对象上的属性，指向构造函数。但是根据实例对象寻找属性的顺序，若实例对象上没有实例属性或方法时，就去原型链上寻找，因此，实例对象也是能使用constructor属性的</p>
+</li>
+</ol>
+<h2 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h2><p><img src="file:///C:\Users\PC\AppData\Local\Temp\ksohtml14984\wps6.jpg" alt="img"> </p>
+<ol>
+<li><p>每创建一个函数都会有一个 prototype 属性，该属性是一个指针，指向一个对象，该对象为原型对象 (Food.prototype)。  </p>
+</li>
+<li><p>原型对象上的默认属性 constructor 也是一个指针，指向其相关的构造函数。</p>
+</li>
+<li><p>通过 new 操作符产生的实例对象都会有一个内部属性指向原型对象，该实例对象可以访问原型对象上的所有属性和方法。  </p>
+</li>
+<li><p>实例可以通过内部指针访问到原型对象，原型对象也可以通过 constructor 找到构造函数。  </p>
+</li>
+<li><p>每个构造函数都有一个原型对象，原型对象上包含一个指向构造函数的指针，实例包含一个指向原型对象的内部指针。  </p>
+</li>
+<li><p>__proto__的指向取决于对象创建时的实现方式。  </p>
+</li>
+<li><p>构造函数实例，封装的函数，如果通过 new 操作符来调用则是构造函数，否则则不是。  </p>
+</li>
+<li><p>在整个原型链上寻找某个属性，对性能有影响，越是上层的原型对象，对性能的影响越大。  </p>
+</li>
+<li><p>js中一切皆对象，通过 new Function 的是函数对象，其构造函数是 Function，而普通对象的构造函数则是 Object 。  </p>
+</li>
+<li><p>每一个对象都有__proto__属性，而每一个函数对象才有 prototype 属性。</p>
+</li>
+</ol>
+<h2 id="实例化对象会有几份内存"><a href="#实例化对象会有几份内存" class="headerlink" title="实例化对象会有几份内存"></a>实例化对象会有几份内存</h2><ul>
+<li>堆内存–复杂</li>
+<li>栈内存–基本</li>
+</ul>
+<h2 id="jq获取dom"><a href="#jq获取dom" class="headerlink" title="jq获取dom"></a>jq获取dom</h2><p>JQ: $(“选择器”)&#x2F;一系列的jq方法通过节点之间的关系获取节点</p>
+<p>\1. 获取某个jq对象节点的父节点 parent(“选择器”), 填写选择器可以对找到的节点进一步过滤</p>
+<p>\2. 获取某个jq对象节点的所有直系祖先节点 parents(“选择器”), 填写选择器可以对找到的节点进一步过滤</p>
+<p>\3. 获取某个jq对象节点的所有直系祖先节点直到某个节点停止, 不包含指定的节点 parentsUntil(“指定停止节点”,”选择器”), 填写选择器可以对找到的节点进一步过滤</p>
+<p>\4. 获取某个jq对象节点的所有子节点 children(“选择器”), 填写选择器可以对找到的节点进一步过滤</p>
+<p>\5. 获取某个jq对象节点的所有后代节点 find(“选择器”), 必须填写选择器才可以进行查找</p>
+<p>\6. 获取某个jq对象节点的上一个相邻兄弟节点 prev(“选择器”), 填写选择器可以对找到的节点进一步过滤</p>
+<p>\7. 获取某个jq对象节点的下一个相邻兄弟节点 next(“选择器”), 填写选择器可以对找到的节点进一步过滤</p>
+<p>\8. 获取某个jq对象节点的上面所有兄弟节点 prevAll(“选择器”), 填写选择器可以对找到的节点进一步过滤</p>
+<p>\9. 获取某个jq对象节点的下面所有兄弟节点 nextAll(“选择器”), 填写选择器可以对找到的节点进一步过滤</p>
+<p>\10. 获取某个jq对象节点的所有兄弟节点 siblings(“选择器”), 填写选择器可以对找到的节点进一步过滤</p>
+<h2 id="js获取dom"><a href="#js获取dom" class="headerlink" title="js获取dom"></a>js获取dom</h2><p>JS: document.getElementByxxx&#x2F;querySelectxxx;通过节点之间的关系获取节点</p>
+<p>\1. 获取节点的子节点(子节点可以有多个)</p>
+<p> document.head.childNodes</p>
+<p> \2. 获取到节点的元素子节点</p>
+<p> document.head.children</p>
+<p> \3. 获取节点的父节点(有且只有一个)</p>
+<p> document.body.parentNode</p>
+<p> 4.1 获取节点的第一个子节点</p>
+<p>document.head.firstChild</p>
+<p> 4.2 获取节点的第一个元素子节点</p>
+<p> document.head.firstElementChild</p>
+<p> 5.1 获取节点的最后一个子节点</p>
+<p> 5.2 获取节点的最后一个元素子节点</p>
+<p> document.head.lastChild</p>
+<p> document.head.lastElementChild</p>
+<p> 6.1 获取节点的上一个兄弟节点</p>
+<p> 6.2 获取节点的上一个元素兄弟节点</p>
+<p> document.body.previousSibling</p>
+<p> document.body.previousElementSibling</p>
+<p> 7.1 获取节点的下一个兄弟节点</p>
+<p> 7.2 获取节点的下一个元素兄弟节点</p>
+<p> document.head.nextSibling</p>
+<p> document.head.nextElementSibling</p>
+<h2 id="给dom添加事件"><a href="#给dom添加事件" class="headerlink" title="给dom添加事件"></a>给dom添加事件</h2><p>1.常规添加。直接在标签里添加。</p>
+<p>2.动态添加。</p>
+<p>3.事件监听添加。</p>
+<p>addEventListener(“事件类型” , “事件执行的回调函数” , “布尔值”);true：事件捕获。false：事件冒泡。</p>
+<p>addEventListener是给同一对象的相同事件添加一个或多个执行函数，里面中的this指向的是当前执行对象。</p>
+<h2 id="vuex的实现原理"><a href="#vuex的实现原理" class="headerlink" title="vuex的实现原理"></a><strong>vuex</strong>的实现原理</h2><p><img src="file:///C:\Users\PC\AppData\Local\Temp\ksohtml14984\wps7.jpg" alt="img"> </p>
+<p><strong>vue</strong>x实现了一个单向数据流，在全局拥有一个State存放数据，当组件要更改State中的数据时，必须通过Mutation进行，Mutation同时提供了订阅者模式供外部插件调用获取State数据的更新。而当所有异步操作(常见于调用后端接口异步获取更新数据)或批量的同步操作需要走Action，但Action也是无法直接修改State的，还是需要通过Mutation来修改State的数据。最后，根据State的变化，渲染到视图上。</p>
+<h2 id="vue的作用域插槽有所了解吗"><a href="#vue的作用域插槽有所了解吗" class="headerlink" title="vue的作用域插槽有所了解吗"></a><strong>vue</strong>的作用域插槽有所了解吗</h2><p>插槽是让父组件可以向子组件指定位置处插入一html结构,自由灵活,也是组件间的一种通信方式。形式上有,默认插槽,具名插槽还有作用域插槽。</p>
+<p>作用域插槽就是需要在slot上面绑定数据，供将来使用组件时使用 ，意思就是要我们在子组件里的slot就预先把数据存起来。子组件中的作用域插槽可以为父组件中的插槽的显示提供数据。</p>
+<p>作用域插槽适合的场景是至少包含三级以上的组件层级，是一种优秀的组件化方案！</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7097195971385229325">https://juejin.cn/post/7097195971385229325</a></p>
+<h2 id="v-if和v-for可以一起用吗"><a href="#v-if和v-for可以一起用吗" class="headerlink" title="v-if和v-for可以一起用吗"></a>v-if和v-for可以一起用吗</h2><p>v-for与v-if不建议同时加给一个标签，因为v-for优先级大于v-if，系统会先循环渲染所有的标签再给每个标签设置v-if，这样就没有达到我们的预期，降低了渲染效率；</p>
+<p>如何解决v-if和v-for带来的问题</p>
+<p>我们可以将v-if加给v-for标签的父级，让v-if先执行，提升渲染效率</p>
+<h2 id="你是怎么去写一个自定义组件的"><a href="#你是怎么去写一个自定义组件的" class="headerlink" title="你是怎么去写一个自定义组件的"></a>你是怎么去写一个自定义组件的</h2><p>自定义组件总结:</p>
+<p>语法:<strong>vue</strong>.component(‘组件的名字’,{data,template…})</p>
+<p>*.data:必须为一个函数,这个函数中返回一个对象</p>
+<p>*. template:用来表示这个组件的渲染后的具体的代码</p>
+<p>组件的属性,是通过props定义的,props可以是一个数组,也可以是一个对象.如果是数组,那么就直接写属性的名字,如果是对象,那么可以给每个属性定义一些约束,比如type,required,default.</p>
+<p>组件中的代码,必须只有一个根元素</p>
+<p>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43677746/article/details/103810277">https://blog.csdn.net/qq_43677746/article/details/103810277</a></p>
+<h2 id="git常用命令你知道吗"><a href="#git常用命令你知道吗" class="headerlink" title="git常用命令你知道吗"></a>git常用命令你知道吗</h2><p>基本设置（初始化）</p>
+<p>设置用户名: $ git config –global user.name “你的名字”</p>
+<p>查看用户名: $ git config –global user.name</p>
+<p>设置邮箱: $ git config –global user.email “你的邮箱”</p>
+<p>查看邮箱: $ git config –global user.email</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">PC@DESKTOP-GCMH3ND MINGW64 ~/WebstormProjects/elm-cpc (master)</span><br><span class="line">$ git config --global user.email</span><br><span class="line">1728980597@qq.com</span><br><span class="line"></span><br><span class="line">PC@DESKTOP-GCMH3ND MINGW64 ~/WebstormProjects/elm-cpc (master)</span><br><span class="line">$ git config --global user.name</span><br><span class="line">PC</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<p>忽略某些文件: $ 创建.gitignore文件，文件中写入需要忽略的文件名（示例:node_modules &#x2F;dist .idea …），如果需要忽略的文件已经提交到仓库，需要删除后，再次提交.gitignore文件才可生效</p>
+<p>初始化git版本库: $ git init</p>
+<p>操作命令</p>
+<p>日常操作</p>
+<p>添加文件到版本库: $ git add .</p>
+<p>添加单个文件到版本库: $ git add test.text</p>
+<p>添加某个后缀的文件: $ git add *.文件后缀</p>
+<p>提交版本库文件: $ git commit -m “备注”</p>
+<p>推入仓库: $ git push</p>
+<p>克隆</p>
+<p>克隆项目: $ git clone 项目的ssh或http地址</p>
+<p>克隆指定分支的代码: $ git clone -b 分支名称 项目的ssh或http地址</p>
+<p>分支</p>
+<p>查看本地所有分支: $ git branch</p>
+<p>查看远程所有分支: $ git branch -r</p>
+<p>查看本地和远程所有分支: $ git branch -a</p>
+<p>新建分支: $ git branch 分支名称</p>
+<p>以远程分支为基础新建一个分支，并切换到该分支: $ git checkout -b 分支名称 origin&#x2F;远程分支</p>
+<p>切换到上一个分支: $ git checkout -</p>
+<p>删除分支: $ git branch -d 分支名称 (这个命令如果分支没有被合并会删除失败)</p>
+<p>删除分支: $ git branch -D 分支名称 (这个命令是强制删除)</p>
+<p>删除远程已经不存在的分支: $ git remote prune origin</p>
+<p>合并分支: $ git merge 指定分支名称 （如果发生冲突，就不会自动提交）</p>
+<p>重命名分支: $ git branch -m 原来的分支名称 新的分支名称（不会覆盖同名分支）</p>
+<p>重命名分支: $ git branch -M 原来的分支名称 新的分支名称（会覆盖同名分支）</p>
+<p>在现有分支与指定的远程分支之间建立追踪关系: $ git branch –set-upstream 分支名称 远程分支名称</p>
+<p>查看历史状态</p>
+<p>当前状态: $ git status</p>
+<p>查看历史记录: $ git log</p>
+<p>撤销修改</p>
+<p>撤销尚未提交的所有修改: $ git checkout head .</p>
+<p>撤销尚未提交的单个后缀文件: $ git checkout head *.后缀</p>
+<p>webpack打包有了解吗</p>
+<p>本质上,webpack 是一个现代 <strong>javascript</strong> 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时,它会递归地构建一个依赖关系图(dependency graph),其中包含应用程序需要的每个模块,然后将所有这些模块打包成一个或多个 bundle。</p>
+<p>webpack 构建流程</p>
+<p>Webpack 的运行流程是一个串行的过程,从启动到结束会依次执行以下流程 :</p>
+<p>1.初始化参数：从配置文件和 Shell 语句中读取与合并参数,得出最终的参数。</p>
+<p>2.开始编译：用上一步得到的参数初始化 Compiler 对象,加载所有配置的插件,执行对象的 run 方法开始执行编译。</p>
+<p>3.确定入口：根据配置中的 entry 找出所有的入口文件。</p>
+<p>4.编译模块：从入口文件出发,调用所有配置的 Loader 对模块进行翻译,再找出该模块依赖的模块,再递归本步骤直到所有入口依赖的文件都经过了本步骤的处理。</p>
+<p>5.完成模块编译：在经过第 4 步使用 Loader 翻译完所有模块后,得到了每个模块被翻译后的最终内容以及它们之间的依赖关系。</p>
+<p>6.输出资源：根据入口和模块之间的依赖关系,组装成一个个包含多个模块的 Chunk,再把每个 Chunk 转换成一个单独的文件加入到输出列表,这步是可以修改输出内容的最后机会。</p>
+<p>7.输出完成：在确定好输出内容后,根据配置确定输出的路径和文件名,把文件内容写入到文件系统。</p>
+<p>在以上过程中,Webpack 会在特定的时间点广播出特定的事件,插件在监听到感兴趣的事件后会执行特定的逻辑,并且插件可以调用 Webpack 提供的 API 改变 Webpack 的运行结果。</p>
+<p>对restful接口规范有了解吗</p>
+<p>什么是RESTful架构：</p>
+<p>　（1）每一个URI代表一种资源；</p>
+<p>　（2）客户端和服务器之间，传递这种资源的某种表现层；</p>
+<p>　（3）客户端通过四个HTTP动词，对服务器端资源进行操作，实现”表现层状态转化”。</p>
+<p>一、协议</p>
+<p>API与用户的通信协议，总是使用HTTPs协议。</p>
+<p>二、域名</p>
+<p>应该尽量将API部署在专用域名之下。</p>
+<p>三、版本（Versioning）</p>
+<p>应该将API的版本号放入URL。</p>
+<p>四、路径（Endpoint）</p>
+<p>路径又称”终点”（endpoint），表示API的具体网址。</p>
+<p>五、HTTP动词</p>
+<p>对于资源的具体操作类型，由HTTP动词表示。</p>
+<p>六、过滤信息（Filtering）</p>
+<p>如果记录数量很多，服务器不可能都将它们返回给用户。API应该提供参数，过滤返回结果。</p>
+<p>七、状态码（Status Codes）</p>
+<p>服务器向用户返回的状态码和提示信息，常见的有以下一些（方括号中是该状态码对应的HTTP动词）。</p>
+<p>八、错误处理（Error handling）</p>
+<p>如果状态码是4xx，就应该向用户返回出错信息。一般来说，返回的信息中将error作为键名，出错信息作为键值即可。</p>
+<p>九、返回结果</p>
+<p>针对不同操作，服务器向用户返回的结果应该符合以下规范。</p>
+<p>十、Hypermedia API</p>
+<p>RESTful API最好做到Hypermedia，即返回结果中提供链接，连向其他API方法，使得用户不查文档，也知道下一步应该做什么。</p>
+<p>十一、其他</p>
+<p>（1）API的身份认证应该使用OAuth 2.0框架。</p>
+<p>（2）服务器返回的数据格式，应该尽量使用JSON，避免使用XML。</p>
+<p>自己手写过哪些功能的源码</p>
+<p>数据库中 比如四份试卷abcd 每个试卷中都有题目  这个存储形式你知道吗</p>
+<p>知不知道什么是容器</p>
+<p>Docker 是世界领先的软件容器平台。</p>
+<p>开发人员利用 Docker 可以消除协作编码时“在我的机器上可正常工作”的问题。</p>
+<p>运维人员利用 Docker 可以在隔离容器中并行运行和管理应用，获得更好的计算密度。</p>
+<p>企业利用 Docker 可以构建敏捷的软件交付管道，以更快的速度、更高的安全性和可靠的信誉为 Linux 和 Windows Server 应用发布新功能。</p>
+<p>Docker 的特点文件系统隔离、网络环境隔离、进程隔离等等，利用这些特点能很好的解决不同版本不同依赖的项目实现隔离。</p>
+<p>前端工程容器化可以一整套环境打包封装成镜像，无需重复配置环境。容器进程间的隔离也带来了应用隔离的好处，相互不受影响。</p>
+<p>输入url到页面显示的全过程</p>
+<p>大致将其分为下六大步骤：</p>
+<p>URL解析</p>
+<p>DNS查询</p>
+<p>TCP连接</p>
+<p>处理请求</p>
+<p>接受响应</p>
+<p>渲染页面</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7098335747266052132">https://juejin.cn/post/7098335747266052132</a></p>
+<p>hooks有了解吗  经常用到哪些hooks</p>
+<p>Hooks 译为钩子，Hooks 就是在函数组件内，负责钩进外部功能的函数。</p>
+<p><strong>React</strong> 提供了一些常用钩子，<strong>React</strong> 也支持自定义钩子，这些钩子都是用于为函数引入外部功能。</p>
+<p>当我们在组件中，需要引入外部功能时，就可以使用 <strong>React</strong> 提供的钩子，或者自定义钩子。</p>
+<p>使用 Hooks有2大原因：</p>
+<p>简化逻辑复用；</p>
+<p>让复杂组件更易理解。</p>
+<p>常用的hooks:</p>
+<p>\1. useState</p>
+<p>useState 是允许你在 <strong>React</strong> 函数组件中添加 state 的 Hook。</p>
+<p>\2. useEffect</p>
+<p>useEffect 可以让你在函数组件中执行副作用操作。</p>
+<p>副作用是指一段和当前执行结果无关的代码，常用的副作用操作如数据获取、设置订阅、手动更改<strong>React</strong>组件中的DOM。</p>
+<p>另外，useEffect 提供了四种执行副作用的时机：</p>
+<p>a.每次 render 后执行：不提供第二个依赖项参数。比如 useEffect(() &#x3D;&gt; {})；</p>
+<p>b.仅第一次 render 后执行：提供一个空数组作为依赖项。比如 useEffect(() &#x3D;&gt; {}, [])；</p>
+<p>c.第一次以及依赖项发生变化后执行：提供依赖项数组。比如 useEffect(() &#x3D;&gt; {}, [deps])；</p>
+<p>d.组件 unmount 后执行：返回一个回调函数。比如 useEffect() &#x3D;&gt; { return () &#x3D;&gt; {} }, [])。</p>
+<p>\3. useCallback</p>
+<p>useCallback 定义的回调函数只会在依赖项改变时重新声明这个回调函数，这样就保证了组件不会创建重复的回调函数。而接收这个回调函数作为属性的组件，也不会频繁地需要重新渲染。</p>
+<p>\4. useMemo</p>
+<p>useMemo 定义的创建函数只会在某个依赖项改变时才重新计算，有助于每次渲染时不会重复的高开销的计算，而接收这个计算值作为属性的组件，也不会频繁地需要重新渲染。</p>
+<p>\5. useRef</p>
+<p>useRef 返回一个 ref 对象，这个 ref 对象在组件的整个生命周期内持续存在。</p>
+<p>有 2 个用处：</p>
+<p>保存 DOM 节点的引用；</p>
+<p>在多次渲染之间共享数据。</p>
+<p>\6. useContext</p>
+<p>useContext 用于接收一个 context 对象并返回该 context 的值，可以实现跨层级的数据共享。</p>
+<p>\7. useReducer</p>
+<p>useReducer 用来引入 Reducer 功能。</p>
+<p>函数组件和类组件的区别</p>
+<p>\1. 函数组件：本质上就是一个函数，将组件对应的UI视图以JSX的语法当作函数的返回值return出来，代码简单清晰。但是相比较于class组件，因为本身只是一个函数，所以内部无法使用组件的生命周期。但是可以利用<strong>React</strong>提供的新特性<strong>React</strong>-hook解决生命周期问题</p>
+<p>\2. class组件：本质上是一个类(es6里的class)，每个组件都是类实例化出的一个对象，因为语法为面向对象，所以可以在内容使用<strong>React</strong>的生命周期函数，但是语法晦涩，逻辑看起来比较复杂。</p>
+<p>redux数据流有了解吗</p>
+<p><img src="file:///C:\Users\PC\AppData\Local\Temp\ksohtml14984\wps8.jpg" alt="img"> </p>
+<p> Redux里的三大核心概念：</p>
+<p>  \1. action：本质上是一个对象，作用是通知store，让store告知reducers应该如何操作state状态，action要有一个type值，用于告知具体需求.</p>
+<p>  \2. store：本质上也是一个对象，将action与reducers联系到一起，并于<strong>React</strong>组件直接通信，该对象有如下几个常用方法：</p>
+<p>​    2.1 getState() 获取所有的state状态</p>
+<p>​    2.2 dispatch() 更新state状态</p>
+<p>​    2.3 subscribe() 设置state变化的监听</p>
+<p>​    2.4 通过subscribe()的返回值取消监听</p>
+<p>  \3. reducers：本质上是一个函数，而且必须是一个函数，而且必须是一个纯函数，用于修改state状态并返回新的state</p>
+<p>setstate是同步还是异步</p>
+<p>先给出答案: 有时表现出异步,有时表现出同步</p>
+<p>\1. setState在更新state里的数据时，在某些情况下为同步更新，在某些情况下为异步更新</p>
+<p>\2. 在 “<strong>React</strong>控制的事件处理函数中以及<strong>React</strong>的生命周期函数中” setState方法总是异步执行的</p>
+<p>\3. 在 “<strong>React</strong>控制之外的事件中” setState方法总是同步执行的</p>
+<p>useeffect中定时器失效是什么原因</p>
+<p><strong>React</strong>的diff算法和普通diff算法有什么区别?和<strong>vue</strong>的diff算法呢</p>
+<p>传统Diff算法</p>
+<p>处理方案: 循环递归每一个节点</p>
+<p><strong>React</strong> DOM diff 和 <strong>vue</strong> DOM diff 的区别：</p>
+<p>\1. <strong>React</strong> 是从左向右遍历对比，<strong>vue</strong> 是双端交叉对比。</p>
+<p>\2. <strong>React</strong> 需要维护三个变量（我看源码发现是五个变量），<strong>vue</strong> 则需要维护四个变量。</p>
+<p>\3. <strong>vue</strong> 整体效率比 <strong>React</strong> 更高，举例说明：假设有 N 个子节点，我们只是把最后子节点移到第一个，那么</p>
+<p>\1. <strong>React</strong> 需要进行借助 Map 进行 key 搜索找到匹配项，然后复用节点</p>
+<p>\2. <strong>vue</strong> 会发现移动，直接复用节点</p>
+<p>知道<strong>React</strong>的diff算法的三个限制吗 </p>
+<p> 为了降低算法复杂度，<strong>React</strong>的diff会预设三个限制：</p>
+<p>1、只对同级元素进行Diff。如果一个DOM节点在前后两次更新中跨越了层级，那么<strong>React</strong>不会尝试复用他。</p>
+<p>2、两个不同类型的元素会产生出不同的树。如果元素由div变为p，<strong>React</strong>会销毁div及其子孙节点，并新建p及其子孙节点。</p>
+<p>3、开发者可以通过 key属性 来暗示哪些子元素在不同的渲染下能保持稳定。</p>
+<p>ts和js你觉得有什么区别</p>
+<p>TypeScript和<strong>javascript</strong>区别在哪？</p>
+<p>Ø TypeScript能使用<strong>javascript</strong> 中的所有代码和编码概念</p>
+<p>Ø TypeScript 从核心语言方面和类概念的模塑方面对 <strong>javascript</strong> 对象模型进行扩展</p>
+<p>Ø <strong>javascript</strong> 代码可以在无需任何修改的情况下与 TypeScript 一同工作，同时可以使用编译器将 TypeScript 代码转换为 <strong>javascript</strong></p>
+<p>Ø TypeScript 通过类型注解提供编译时的静态类型检查</p>
+<p>Ø TypeScript 中的数据要求带有明确的类型，<strong>javascript</strong>不要求</p>
+<p>Ø TypeScript 为函数提供了缺省参数值</p>
+<p>Ø TypeScript 引入了 <strong>javascript</strong> 中没有的“类”概念</p>
+<p>Ø TypeScript 中引入了模块的概念，可以把声明、数据、函数和类封装在模块中</p>
+<p>说一下你对模块和组件的理解</p>
+<p>组件(Component)和模块(Module)是一对容易混淆的名词，也常常被用来相互替换。两者是否有差异往往取决专业背景、所在领域、以及视角。</p>
+<p>从设计上来看，组件强调复用，模块强调职责(内聚、分离)，或者说组件是达到可复用要求的模块。</p>
+<p>Module, 中文为模块。它的核心意义是分离职责，属于代码级模块化的产出。本身是一组具有一定内聚性代码的组合，职责明确。对外的接口可以是松散的，也可以是集中的。SEI的定义如下:</p>
+<p>An implementation unit of software that provides a coherent set of responsibilities.</p>
+<p>它以问题分解的形式，来解决软件设计问题。它更强调一个内聚的概念，形式上可以是Java中的包，也可以是一个源代码目录。</p>
+<p>Component，中文称为组件，或者构件。使用非常比较广泛，它的核心意义在于复用，相对模块，对于依赖性有更高的要求。</p>
+<p><strong>React</strong>的优化你做过哪些</p>
+<p>对箭头函数了解吗</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903801799835655">详解箭头函数和普通函数的区别以及箭头函数的注意事项、不适用场景 - 掘金 (juejin.cn)</a></p>
+<p>普通函数和箭头函数的区别：</p>
+<p>\1. 箭头函数没有prototype(原型)，所以箭头函数本身没有this</p>
+<p>\2. 箭头函数的this在定义的时候继承自外层第一个普通函数的this。</p>
+<p>\3. 如果箭头函数外层没有普通函数，严格模式和非严格模式下它的this都会指向window(全局对象)</p>
+<p>\4. 箭头函数本身的this指向不能改变，但可以修改它要继承的对象的this。</p>
+<p>\5. 箭头函数的this指向全局，使用arguments会报未声明的错误。</p>
+<p>\6. 箭头函数的this指向普通函数时,它的argumens继承于该普通函数</p>
+<p>\7. 使用new调用箭头函数会报错，因为箭头函数没有constructor</p>
+<p>\8. 箭头函数不支持new.target</p>
+<p>\9. 箭头函数不支持重命名函数参数,普通函数的函数参数支持重命名</p>
+<p>\10. 箭头函数相对于普通函数语法更简洁优雅</p>
+<p>?<strong>React</strong>中使用箭头函数会有不好的影响吗</p>
+<p>一条语句返回对象字面量，需要加括号，或者直接写成多条语句的return形式</p>
+<p>箭头函数在参数和箭头之间不能换行</p>
+<p>说一下宏任务和微任务</p>
+<p>首先我们要知道两点：</p>
+<p>1, <strong>javascript</strong>是单线程的语言</p>
+<p>2, Event Loop是<strong>javascript</strong>的执行机制</p>
+<p>一般来说，非阻塞性的任务采取同步的方式，直接在主线程的执行栈完成。</p>
+<p>一般来说，阻塞性的任务都会采用异步来执行，异步的工作一般会交给其他线程完成，然后回调函数会放到事件队列中。</p>
+<p>同步和异步任务分别进入不同的执行”场所”，同步的进入主线程，异步的进入Event Table并注册函数</p>
+<p>当指定的事情完成时，Event Table会将这个函数移入Event Queue。</p>
+<p>主线程内的任务执行完毕为空，会去Event Queue读取对应的函数，进入主线程执行。</p>
+<p>上述过程会不断重复，也就是常说的Event Loop(事件循环)</p>
+<p>微任务和宏任务皆为异步任务，它们都属于一个队列，主要区别在于他们的执行顺序</p>
+<p>js异步有一个机制，就是遇到宏任务，先执行宏任务，执行完毕一个宏任务之后，看微任务队列里是否有可执行的微任务, 如果有, 一口气执行完所有微任务, 再执行下一个宏任务</p>
+<p>hooks原理了解吗</p>
+<p>原理</p>
+<p>为什么要发明hooks</p>
+<p>hooks 钩子 定义</p>
+<p>State &#x3D;&gt; View 映射</p>
+<p>Hooks 就是把某个目标结果钩到某个可能会变化的数据源或者事件源上，那么当被钩到的数据或事件发生变化时，产生这个目标结果的代码会重新执行，产生更新后的结果。</p>
+<p>模型</p>
+<p>简化逻辑复用</p>
+<p>Hooks 中被钩的对象，不仅可以是某个独立的数据源，也可以是另一个 Hook 执行的结果，这就带来了 Hooks 的最大好处：逻辑的复用</p>
+<p>替代高阶组件</p>
+<p>关注分离</p>
+<p>高内聚，低耦合</p>
+<p>Class 组件中，你不得不把同一个业务逻辑的代码分散在类组件的不同生命周期的方法中。</p>
+<p>解决了 Class 组件代码冗余、难以逻辑复用的问题</p>
+<p>hooks可以写在条件语句中吗</p>
+<p>Hook 就是 <strong>javascript</strong> 函数，但是使用它们会有两个额外的规则：</p>
+<p>​    \1.  只能在函数最外层调用Hook。不要在循环、条件判断或者子函数中调用。</p>
+<p>​    \2.  只能在<strong>React</strong>的函数组件中调用Hook。不要在其他<strong>javascript</strong>函数中调用。</p>
+<p><strong>React</strong>中如何使用环境变量</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/QingHan_wow/article/details/114868447">https://blog.csdn.net/QingHan_wow/article/details/114868447</a></p>
+<p><strong>vue</strong>的环境变量和<strong>React</strong>的环境变量有什么区别吗</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903813569052679">面试官：<strong>React</strong>和<strong>vue</strong>有什么区别吗？ - 掘金 (juejin.cn)</a></p>
+<p>如何在<strong>React</strong>中实现跨域请求</p>
+<p>网络请求代理</p>
+<p>我们目前在用<strong>React</strong>项目发起网络请求时，因为在整个项目开发期间，项目的运行由<strong>React</strong>脚手架自行启动服务器运行，位置为<a href="http://localhost:3000，所以。只要向其他位置发起网络请求就会跨域。**React**推荐我们通过网络请求代理来解决跨域问题，设置代理的办法：">http://localhost:3000，所以。只要向其他位置发起网络请求就会跨域。**React**推荐我们通过网络请求代理来解决跨域问题，设置代理的办法：</a></p>
+<p>\1. 直接设置：直接在项目的package.json文件里，通过proxy字段，直接设置代理即可。注意：如果代理，url地址只写路由部分，不要写ip+端口部分</p>
+<p>\2. 如果插件设置：</p>
+<p>2.1 先安装http-proxy-middleware</p>
+<p>2.2 在项目的src目录，新建一个文件，文件名：setupProxy.js</p>
+<p>节流和防抖有了解吗</p>
+<p>防抖和节流都是对多次频繁触发的处理，但是二者又有很大不同。</p>
+<p>防抖是什么呢？</p>
+<p>输入框的前后两次改变超过n毫秒才执行查询，只要改变时间间隔小于n毫秒就不执行查询。</p>
+<p>形象的的说就是：防止抖动（防抖函数内心独白：“你就抖动吧！等你不抖动了，我们在进行下一步”）</p>
+<p>节流：节省交互沟通。</p>
+<p>n毫秒内的改变只执行一次查询。</p>
+<p>形象的的说就是：no！no！no！一个一个来，按照时间节奏来！插队禁止！</p>
+<p>你在<strong>React</strong>中的哪些地方使用过节流和防抖</p>
+<p>1、一个搜索输入框， 用户不停的进行输入（这个时候就是抖动的过程）， 等用户输入停止之后，再触发搜索。</p>
+<p>2、drag（拖动）事件或者 scroll（滚动） 期间触发某个回调，要设置一个时间间隔。这时候就不能使用防抖了，为什么呢？</p>
+<p>防抖是拖拽或者滚动结束之后才返回回调，但是我是需要在过程中进行触发回调，但是又不需要那么的频繁；这时候就使用节流函数，每隔一定的时间进项触发就好了！</p>
+<p>3、开发一个用户注册页面，平台里规定，昵称字段必须唯一，但是不要等用户点击注册按钮的时候才去检查，要做到尽快的去检查。</p>
+<p>首先我们想到，每当输入框改变的时候，我们就检查一次是否已经有人注册该昵称。如果用户很快速的输入，显然这样查询太快，对服务器压力太大。</p>
+<p>http和https的区别</p>
+<p>Http (HTTP-Hypertext transfer protocol) 是一个简单的请求-响应协议，它通常运行在TCP之上。它指定了客户端可能发送给服务器什么样的消息以及得到什么样的响应。请求和响应消息的头以ASCII码形式给出；而消息内容则具有一个类似MIME的格式。这个简单模型是早期Web成功的有功之臣，因为它使开发和部署非常地直截了当。</p>
+<p>Https（全称：Hyper Text Transfer Protocol over SecureSocket Layer），是以安全为目标的 HTTP 通道，在HTTP的基础上通过传输加密和身份认证保证了传输过程的安全性  。HTTPS 在HTTP 的基础下加入SSL 层，HTTPS 的安全基础是 SSL，因此加密的详细内容就需要 SSL。 HTTPS 存在不同于 HTTP 的默认端口及一个加密&#x2F;身份验证层（在 HTTP与 TCP 之间）。这个系统提供了身份验证与加密通讯方法。它被广泛用于万维网上安全敏感的通讯，例如交易支付等方面 。</p>
+<p>区别：</p>
+<p>Http是超文本传输协议，数据明文传输，所以会被抓包导致信息泄露，有安全风险问题！</p>
+<p>Https 则是具有安全性的SSL加密传输协议。</p>
+<p>Http和Https使用的是完全不同的连接方式用的端口也不一样,前者是80,后者是443。</p>
+<p>Http的连接很简单,是无状态的。HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议。Https协议需要到CA付费申请证书</p>
+<p>Https协议因为采用密文传输，要比Http协议安全。</p>
+<p>redux thunk的源码你看过吗</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6937491452838559781">「源码解析」一文吃透<strong>React</strong>-redux源码（useMemo经典源码级案例） - 掘金 (juejin.cn)</a></p>
+<p>原理如下：</p>
+<p>function createThunkMiddleware(extraArgument) {</p>
+<p> return ({ dispatch, getState }) &#x3D;&gt; (next) &#x3D;&gt; (action) &#x3D;&gt; {</p>
+<p>  if (typeof action &#x3D;&#x3D;&#x3D; ‘function’) {</p>
+<p>   return action(dispatch, getState, extraArgument);</p>
+<p>  }</p>
+<p>  return next(action);</p>
+<p> };</p>
+<p>}</p>
+<p>const thunk &#x3D; createThunkMiddleware();</p>
+<p>thunk.withExtraArgument &#x3D; createThunkMiddleware;</p>
+<p>export default thunk;</p>
+<p>redux thunk的原理是什么</p>
+<pre><code> 它的核心代码其实只有两行，就是判断每个经过它的action：如果是function类型，就调用这个function（并传入 dispatch 和 getState 及 extraArgument 为参数），而不是任由让它到达 reducer，因为 reducer 是个纯函数，Redux 规定到达 reducer 的 action 必须是一个 plain object 类型。
+</code></pre>
+<p><strong>React</strong>如何阻止事件冒泡</p>
+<p>阻止事件冒泡的方法</p>
+<p>1、在没有涉及到原生事件注册只有<strong>React</strong>事件时，用e.stopPropagation()阻止冒泡</p>
+<p>2、当用document.addEventListener注册了原生的事件后，用e.stopPropagation()是不能阻止与document之间的冒泡，这时候需要用到e.nativeEvent.stopImmediatePropagation()方法</p>
+<p>3、阻止合成事件与非合成事件（除了document）之间的冒泡，以上两种方式都不适用，需要用到e.target 判断</p>
+<p>对回流和重绘有了解吗</p>
+<p>reflow:当render树的一部分或者全部因为大小边距等问题发生改变而需要重建的过程，叫做回流</p>
+<p>repaint:当诸如颜色背景等不会引起页面布局变化，而只需要重新渲染的过程叫做重绘</p>
+<p>回流一定伴随着重绘，而重绘却可以单独出现</p>
+<p>补充：改变字体大小会引发回流</p>
+<p>你封装过哪些组件</p>
+<p><strong>vue</strong>2和<strong>vue</strong>3的区别你知道哪些</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7097938704744284197"><strong>vue</strong>2.0和<strong>vue</strong>3.0的区别 - 掘金 (juejin.cn)</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/07/29/%E9%9D%A2%E8%AF%95%E9%A2%982/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/07/29/interview2-md/" rel="prev" title="interview2.md">
+                interview2.md <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/cpclikeprogram" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/u/6733955578" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.cnblogs.com/CPC-Carper-diem/" target="_blank" title="CBlog">
+                      
+                        <i class="fa fa-fw fa-wifi"></i>CBlog</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#vue%E5%92%8CReact-VR"><span class="nav-number">1.</span> <span class="nav-text">vue和React-VR</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E4%BC%BC%E4%B9%8B%E5%A4%84"><span class="nav-number">1.1.</span> <span class="nav-text">相似之处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95%E5%8C%BA%E5%88%AB"><span class="nav-number">1.2.</span> <span class="nav-text">语法区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E4%B8%8D%E5%90%8C%E7%82%B9"><span class="nav-number">1.3.</span> <span class="nav-text">组件不同点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mvc%E5%92%8Cmvvm%E6%AF%94%E8%BE%83-MV"><span class="nav-number">2.</span> <span class="nav-text">mvc和mvvm比较-MV</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MVVM%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E7%82%B9%E4%BB%A5%E5%8F%8A%E4%B8%8EMVC%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">2.1.</span> <span class="nav-text">MVVM模式的优点以及与MVC模式的区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E6%9E%9C%E6%88%91%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%9E%8B%E7%9A%84%E4%B8%9C%E8%A5%BF%E6%98%AF%E5%BA%94%E8%AF%A5%E4%BD%BF%E7%94%A8React%E8%BF%98%E6%98%AFvue-QU"><span class="nav-number">3.</span> <span class="nav-text">如果我开发一个小型的东西是应该使用React还是vue?-QU</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9es6%E4%BA%86%E8%A7%A3%E5%A4%9A%E5%B0%91-JS"><span class="nav-number">4.</span> <span class="nav-text">对es6了解多少-JS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#let-const-var%E5%8C%BA%E5%88%AB"><span class="nav-number">4.1.</span> <span class="nav-text">let const var区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#var-let-const%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%BB%E8%A6%81%E4%B8%BA%E4%BB%A5%E4%B8%8B%E5%87%A0%E7%82%B9%EF%BC%9A"><span class="nav-number">4.2.</span> <span class="nav-text">var,let,const的区别主要为以下几点：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%80%8E%E4%B9%88%E8%AF%86%E5%88%ABes6%E7%9A%84-%E5%A6%82%E6%9E%9C%E4%B8%8D%E5%85%BC%E5%AE%B9%E4%BD%A0%E4%BC%9A%E6%80%8E%E4%B9%88%E8%A7%A3%E5%86%B3"><span class="nav-number">5.</span> <span class="nav-text">浏览器怎么识别es6的 如果不兼容你会怎么解决</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AC%E5%88%B0%E4%BA%86%E4%BD%A0%E6%8F%90%E5%88%B0babel-%E4%BD%A0%E7%9F%A5%E9%81%93%E5%8E%9F%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88%E4%BB%A5%E5%8F%8A%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE%E5%90%97"><span class="nav-number">6.</span> <span class="nav-text">听到了你提到babel  你知道原理是什么以及如何配置吗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%8D%E5%BB%BA%E8%AE%AE%E9%A2%91%E7%B9%81%E8%B0%83%E7%94%A8setdata-%E5%B0%8F%E7%A8%8B%E5%BA%8F"><span class="nav-number">7.</span> <span class="nav-text">为什么微信小程序不建议频繁调用setdata-小程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#uniapp%E6%80%8E%E4%B9%88%E5%81%9A%E5%88%B0%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%BC%80%E5%8F%91%E7%9A%84-uniapp"><span class="nav-number">8.</span> <span class="nav-text">uniapp怎么做到跨平台开发的-uniapp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E6%9E%9C%E6%88%91%E6%83%B3%E5%8E%BB%E6%89%93%E5%BC%80%E4%B8%80%E4%B8%AA%E8%AE%BE%E5%A4%87%E7%9A%84%E6%91%84%E5%83%8F%E5%A4%B4-%E4%BD%A0%E4%BC%9A%E6%80%8E%E4%B9%88%E6%93%8D%E4%BD%9C"><span class="nav-number">9.</span> <span class="nav-text">如果我想去打开一个设备的摄像头 你会怎么操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue%E4%B8%AD%E5%93%AA%E4%B8%AA%E8%B7%AF%E7%94%B1%E7%94%A8%E7%9A%84%E6%AF%94%E8%BE%83%E5%A4%9A"><span class="nav-number">10.</span> <span class="nav-text">vue中哪个路由用的比较多</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hash%E5%92%8Chistory%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">10.1.</span> <span class="nav-text">hash和history的区别:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B0%88%E4%B8%80%E8%B0%88%E4%BC%98%E5%8C%96"><span class="nav-number">11.</span> <span class="nav-text">谈一谈优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88png%E4%BC%9A%E4%BC%98%E4%BA%8Egif"><span class="nav-number">12.</span> <span class="nav-text">为什么png会优于gif</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%A0%E7%9F%A5%E9%81%93%E6%80%8E%E4%B9%88%E5%9C%A8js%E5%8A%A0%E8%BD%BD%E7%9A%84%E6%97%B6%E5%80%99%E5%8E%BB%E4%BC%98%E5%8C%96%E5%90%97"><span class="nav-number">13.</span> <span class="nav-text">你知道怎么在js加载的时候去优化吗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E6%B8%B2%E6%9F%93%E5%BC%95%E6%93%8E%E6%9C%89%E6%B2%A1%E6%9C%89%E4%BA%86%E8%A7%A3"><span class="nav-number">14.</span> <span class="nav-text">对浏览器的渲染引擎有没有了解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E7%AB%AF%E7%9A%84%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5"><span class="nav-number">15.</span> <span class="nav-text">前端的缓存策略</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5"><span class="nav-number">15.1.</span> <span class="nav-text">HTTP缓存策略</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js%E6%80%8E%E4%B9%88%E5%81%9A%E5%88%B0%E7%BC%93%E5%AD%98"><span class="nav-number">16.</span> <span class="nav-text">js怎么做到缓存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">17.</span> <span class="nav-text">js的基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A4%E6%96%ADjs%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">17.1.</span> <span class="nav-text">判断js数据类型的方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE"><span class="nav-number">18.</span> <span class="nav-text">原型和原型链</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B%E5%8C%96%E5%AF%B9%E8%B1%A1%E4%BC%9A%E6%9C%89%E5%87%A0%E4%BB%BD%E5%86%85%E5%AD%98"><span class="nav-number">19.</span> <span class="nav-text">实例化对象会有几份内存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jq%E8%8E%B7%E5%8F%96dom"><span class="nav-number">20.</span> <span class="nav-text">jq获取dom</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js%E8%8E%B7%E5%8F%96dom"><span class="nav-number">21.</span> <span class="nav-text">js获取dom</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%99dom%E6%B7%BB%E5%8A%A0%E4%BA%8B%E4%BB%B6"><span class="nav-number">22.</span> <span class="nav-text">给dom添加事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vuex%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="nav-number">23.</span> <span class="nav-text">vuex的实现原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%8F%92%E6%A7%BD%E6%9C%89%E6%89%80%E4%BA%86%E8%A7%A3%E5%90%97"><span class="nav-number">24.</span> <span class="nav-text">vue的作用域插槽有所了解吗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-if%E5%92%8Cv-for%E5%8F%AF%E4%BB%A5%E4%B8%80%E8%B5%B7%E7%94%A8%E5%90%97"><span class="nav-number">25.</span> <span class="nav-text">v-if和v-for可以一起用吗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%A0%E6%98%AF%E6%80%8E%E4%B9%88%E5%8E%BB%E5%86%99%E4%B8%80%E4%B8%AA%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E7%9A%84"><span class="nav-number">26.</span> <span class="nav-text">你是怎么去写一个自定义组件的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E4%BD%A0%E7%9F%A5%E9%81%93%E5%90%97"><span class="nav-number">27.</span> <span class="nav-text">git常用命令你知道吗</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">cpc</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
